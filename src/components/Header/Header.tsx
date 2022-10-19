@@ -1,3 +1,10 @@
+import logo from '/assets/images/todo_logo.png'
+import styles from './Header.module.scss'
+
 export function Header() {
-    return <header>Olá eu sou o Header da aplicação</header>
+    return (
+        <header className={styles.header}>
+            <img src={logo} alt='Logo Todo App' />
+        </header>
+    )
 }
