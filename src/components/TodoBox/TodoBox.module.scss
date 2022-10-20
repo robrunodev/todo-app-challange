@@ -1,0 +1,12 @@
+.todoBox {
+  background: var(--gray-400);
+  border-radius: 8px;
+  
+  &.completed {
+    background: tomato;
+
+    span {
+      text-decoration: line-through;
+    }
+  }
+}
