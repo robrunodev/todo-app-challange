@@ -1,9 +1,9 @@
 import { ChangeEvent, FormEvent, useState } from 'react'
 import { Header } from './components/Header/Header'
 import styles from './App.module.scss'
-import { PlusCircle } from 'phosphor-react'
 import { TodoBox } from './components/TodoBox/TodoBox'
 import { TodoProps } from './utils/interfaces'
+import { NewTodoForm } from './components/NewTodoForm/NewTodoForm'
 
 function App() {
   const [todoText, setTodoText] = useState('')
@@ -52,21 +52,12 @@ function App() {
     <>
       <Header />
       <main className={styles.app}>
-        <form onSubmit={handleAddNewTodo}>
-          <input
-            value={todoText}
-            type="text"
-            name="todoText"
-            placeholder='Adicione uma nova tarefa'
-            onChange={handleChangeTodoText}
-            autoComplete="off"
-          />
-          <button type="submit">
-            Criar
-            <PlusCircle />
-          </button>
-        </form>
 
+        <NewTodoForm
+          handleAddNewTodo={handleAddNewTodo}
+          handleChangeTodoText={handleChangeTodoText}
+          inputValue={todoText}
+        />
 
         <div className={styles['todo-list']}>
           <div className={styles['todo-list__header']}>

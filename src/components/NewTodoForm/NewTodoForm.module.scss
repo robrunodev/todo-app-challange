@@ -1,0 +1,41 @@
+.NewTodoForm {
+  form {
+    display: flex;
+
+    input[type="text"] {
+      background: var(--gray-500);
+      border-radius: 8px;
+      border: 1px solid var(--gray-700);
+      height: 3.4rem;
+      flex: 1;
+      padding: 1.5rem;
+      color: white;
+
+      &:focus {
+        outline: transparent;
+        border-color: var(--purple-dark);
+      }
+    }
+    button {
+      margin-left: 0.5rem;
+      border-radius: 8px;
+      background: var(--blue-dark);
+      color: var(--gray-100);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 0;
+      cursor: pointer;
+      padding: 1rem;
+      font-weight: bold;
+
+      svg {
+        margin-left: 0.5rem;
+      }
+
+      &:hover {
+        background: var(--blue);
+      }
+    }
+  }
+}
