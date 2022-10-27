@@ -61,13 +61,13 @@ function App() {
 
         <div className={styles['todo-list']}>
           <div className={styles['todo-list__header']}>
-            <span>
-              Tarefas criadas {totalTodosCount}
-            </span>
+            <p>
+              Tarefas criadas <span>{totalTodosCount}</span>
+            </p>
 
-            <span>
-              Concluídas {`${completedTodosCount} de ${totalTodosCount}`}
-            </span>
+            <p className={styles.completed}>
+              Concluídas <span>{`${completedTodosCount} de ${totalTodosCount}`}</span>
+            </p>
           </div>
 
           {todos.map(todo => {

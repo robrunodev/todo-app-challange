@@ -1,7 +1,10 @@
 .NewTodoForm {
   form {
     display: flex;
-
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -2rem;
+    
     input[type="text"] {
       background: var(--gray-500);
       border-radius: 8px;
@@ -16,6 +19,7 @@
         border-color: var(--purple-dark);
       }
     }
+
     button {
       margin-left: 0.5rem;
       border-radius: 8px;

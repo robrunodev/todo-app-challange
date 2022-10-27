@@ -2,11 +2,31 @@
   max-width: 736px;
   width: 100%;
   margin: 0 auto;
-  
+
   .todo-list {
+    margin-top: 4rem;
+
     .todo-list__header {
       display: flex;
       justify-content: space-between;
+      margin-bottom: 1.5rem;
+
+      p {
+        color: var(--blue);
+        font-weight: bold;
+
+        &.completed {
+          color: var(--purple);
+        }
+
+        span {
+          border-radius: 1rem;
+          background: var(--gray-400);
+          color: var(--gray-100);
+          padding: 5px 10px;
+          font-size: 0.75rem;
+        }
+      }
     }
   }
 }
